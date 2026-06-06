@@ -1,0 +1,92 @@
+<div id="luxury-app-wrapper" class="opacity-0 filter blur-3xl transition-all duration-1000">
+    <div class="bg-luxeblack text-white py-3 overflow-hidden text-[8px] font-medium tracking-[0.4em] uppercase border-b border-gold/20">
+        <div class="marquee-fast">
+            <span>SECURITY CRITICAL BREACH ISOLATED • SYSTEM INTEGRITY RESTORED • LABS DE PARIS ARCHIVES ACTIVATED • QUANTITIES LIMITED •&nbsp;</span>
+            <span>SECURITY CRITICAL BREACH ISOLATED • SYSTEM INTEGRITY RESTORED • LABS DE PARIS ARCHIVES ACTIVATED • QUANTITIES LIMITED •&nbsp;</span>
+        </div>
+    </div>
+
+    <section class="relative h-[80vh] flex items-center justify-center bg-white mx-4 mt-4 rounded-sm overflow-hidden border border-black/5">
+        <div class="absolute inset-0 z-0 bg-cyberwhite">
+            <div class="absolute inset-0 bg-gradient-to-t from-cyberwhite via-transparent to-transparent z-10"></div>
+        </div>
+        
+        <div class="relative z-20 text-center px-4 max-w-5xl">
+            <span class="text-[9px] tracking-[0.7em] uppercase text-white bg-black px-6 py-2 inline-block mb-8 rounded-full font-light box-glow">// STRUCTURE UNIQUE SANS CONCESSION</span>
+            <h2 class="font-serif text-5xl sm:text-7xl md:text-9xl font-light text-black leading-[0.9] mb-12 tracking-tighter">
+                L'Armure Pure,<br><span class="italic font-light text-gold">Sans Pitié.</span>
+            </h2>
+            <a href="/collections/all" class="border border-black text-black tracking-[0.4em] uppercase text-[10px] px-12 py-6 hover:bg-black hover:text-white transition-all duration-500 bg-white/40 backdrop-blur-md inline-block">
+                [ DÉCOUVRIR LE RÉPERTOIRE INTEGRAL ]
+            </a>
+        </div>
+    </section>
+
+    <section class="py-12 px-6 max-w-[1700px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center border-b border-black/5">
+        <div class="p-6 bg-white border border-black/5 rounded-sm shadow-sm">
+            <h4 class="font-serif text-3xl md:text-5xl text-gold font-light" data-target="450">0</h4>
+            <p class="text-[9px] uppercase tracking-widest text-black/40 mt-2">GSM COTON COMPACT ÉLITE</p>
+        </div>
+        <div class="p-6 bg-white border border-black/5 rounded-sm shadow-sm">
+            <h4 class="font-serif text-3xl md:text-5xl text-black font-light" data-target="2026">0</h4>
+            <p class="text-[9px] uppercase tracking-widest text-black/40 mt-2">MATRICE SÉCURISÉE</p>
+        </div>
+        <div class="p-6 bg-white border border-black/5 rounded-sm shadow-sm">
+            <h4 class="font-serif text-3xl md:text-5xl text-gold font-light" data-target="100">0</h4>
+            <p class="text-[9px] uppercase tracking-widest text-black/40 mt-2">% SCELLÉ THERMIQUE</p>
+        </div>
+        <div class="p-6 bg-white border border-black/5 rounded-sm shadow-sm">
+            <h4 class="font-serif text-3xl md:text-5xl text-black font-light" data-target="24">0</h4>
+            <p class="text-[9px] uppercase tracking-widest text-black/40 mt-2">HEURES EXPÉDITION CHRONO</p>
+        </div>
+    </section>
+
+    <div class="bg-gold text-black py-4 overflow-hidden shadow-xl transform -rotate-1 my-12">
+        <div class="marquee-wrap font-serif text-lg tracking-[0.4em] uppercase font-light">
+            <div class="marquee-run items-center gap-16">
+                <span>MAISON SANS PITIÉ LABS</span> <span class="text-xs">◆</span>
+                <span>ATELIER DE PARIS SÉLECTION</span> <span class="text-xs">◆</span>
+                <span>SPATIAL ARMOR CORP INTEGRITY</span> <span class="text-xs">◆</span>
+                <span>COMPACT LUXURY FILAMENT</span> <span class="text-xs">◆</span>
+                <span>MAISON SANS PITIÉ LABS</span> <span class="text-xs">◆</span>
+                <span>ATELIER DE PARIS SÉLECTION</span> <span class="text-xs">◆</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-16 px-6 max-w-[1700px] mx-auto">
+        <div class="border-b border-black/10 pb-6 mb-16">
+            <h3 class="font-serif text-4xl font-light text-black italic">Collection Secrète Actuelle</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            {% assign layout_classes = "md:col-span-7|md:col-span-5 md:mt-12|md:col-span-4|md:col-span-8|md:col-span-6|md:col-span-6" | split: "|" %}
+            {% for product in collections.featured.products limit: 6 %}
+                {% assign class_index = forloop.index0 | modulo: 6 %}
+                {% include 'product-card', product: product, class: layout_classes[class_index], aspect: 'aspect-[4/5]' %}
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="py-16 px-6 max-w-[1700px] mx-auto">
+        <div class="bg-white border border-black/10 p-8 md:p-16 rounded-sm grid grid-cols-1 lg:grid-cols-12 gap-12 items-center box-glow">
+            <div class="lg:col-span-5">
+                <span class="text-gold text-[9px] tracking-[0.5em] uppercase block mb-3">// ARCHIVE LOGISTIQUE SECURE</span>
+                <h3 class="font-serif text-4xl font-light text-black mb-6 leading-tight">EXPÉDITION DANS LE SPECTRE MONDIAL</h3>
+                <p class="text-xs text-black/60 font-light leading-relaxed mb-6 font-sans">Chaque colis quitte l'atelier de Paris sous scellé thermique.</p>
+            </div>
+            <div class="lg:col-span-7">
+                <table class="w-full text-left text-xs font-light font-sans bg-cyberwhite border border-black/5">
+                    <thead class="bg-black text-white text-[9px] tracking-[0.2em] uppercase">
+                        <tr><th class="p-5 font-light">DESTINATION</th><th class="p-5 font-light">DÉLAIS</th><th class="p-5 font-light text-right">FRAIS</th></tr>
+                    </thead>
+                    <tbody class="divide-y divide-black/5 text-black/80">
+                        <tr><td class="p-5 font-medium">France Métropolitaine</td><td class="p-5 text-black/50">24-48h Express</td><td class="p-5 text-right text-gold font-medium">0.00 €</td></tr>
+                        <tr><td class="p-5 font-medium">Union Européenne</td><td class="p-5 text-black/50">2-3 Jours</td><td class="p-5 text-right">15.00 €</td></tr>
+                        <tr><td class="p-5 font-medium">International</td><td class="p-5 text-black/50">5-7 Jours</td><td class="p-5 text-right">35.00 €</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>

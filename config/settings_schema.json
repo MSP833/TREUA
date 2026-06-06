@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Couleurs & Thème",
+    "settings": [
+      {
+        "type": "color",
+        "id": "primary_gold",
+        "label": "Couleur OR Principale",
+        "default": "#B89742"
+      },
+      {
+        "type": "color",
+        "id": "primary_black",
+        "label": "Couleur NOIRE Principale",
+        "default": "#0D0D0D"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Couleur de fond",
+        "default": "#FDFDFD"
+      }
+    ]
+  },
+  {
+    "name": "Typographie",
+    "settings": [
+      {
+        "type": "text",
+        "id": "site_title",
+        "label": "Titre du site",
+        "default": "MAISON SANS PITIÉ"
+      },
+      {
+        "type": "text",
+        "id": "site_tagline",
+        "label": "Sous-titre",
+        "default": "DECRYPTED INTERACTIVE REPERTOIRE"
+      }
+    ]
+  },
+  {
+    "name": "Page d'accueil",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "featured_collection",
+        "label": "Collection en vedette"
+      },
+      {
+        "type": "text",
+        "id": "hero_title",
+        "label": "Titre Hero",
+        "default": "L'Armure Pure, Sans Pitié."
+      }
+    ]
+  },
+  {
+    "name": "Expédition",
+    "settings": [
+      {
+        "type": "text",
+        "id": "shipping_france_time",
+        "label": "Délai France",
+        "default": "24-48h Express"
+      },
+      {
+        "type": "text",
+        "id": "shipping_france_cost",
+        "label": "Coût France",
+        "default": "0.00 €"
+      },
+      {
+        "type": "text",
+        "id": "shipping_eu_time",
+        "label": "Délai UE",
+        "default": "2-3 Jours"
+      },
+      {
+        "type": "text",
+        "id": "shipping_eu_cost",
+        "label": "Coût UE",
+        "default": "15.00 €"
+      }
+    ]
+  }
+]

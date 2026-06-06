@@ -1,0 +1,56 @@
+<div class="py-12 px-6 max-w-[1600px] mx-auto">
+    <a href="/collections/all" class="text-[9px] uppercase tracking-[0.4em] text-black/40 hover:text-gold transition-colors mb-12 block">
+        ← RETOURNER AUX ARCHIVES PRINCIPALES
+    </a>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <div class="lg:col-span-6 bg-white border border-black/5 p-6 rounded-sm box-glow sticky top-32">
+            <div class="aspect-[3/4] overflow-hidden bg-cyberwhite reveal-frame">
+                {% if product.featured_image %}
+                    <img 
+                        src="{{ product.featured_image | img_url: '800x1000' }}" 
+                        alt="{{ product.title }}" 
+                        class="w-full h-full object-cover filter grayscale contrast-105"
+                    >
+                {% endif %}
+            </div>
+        </div>
+        
+        <div class="lg:col-span-6 space-y-8">
+            <div>
+                <span class="text-gold text-[9px] tracking-[0.5em] uppercase block mb-3">// ARCHIVE SÉCURISÉE ACCESSIBLE</span>
+                <h1 class="font-serif text-4xl md:text-6xl font-light text-luxeblack tracking-tight">{{ product.title }}</h1>
+                <p class="text-xl font-light text-gold font-serif mt-4">{{ product.price | money }}</p>
+            </div>
+            
+            <div class="border-t border-b border-black/5 py-6">
+                <h4 class="text-[9px] tracking-widest font-sans uppercase text-black/40 mb-3">CONFECTION ATELIER</h4>
+                <p class="text-xs text-black/60 font-light leading-relaxed font-sans">{{ product.description | strip_html }}</p>
+            </div>
+
+            {% form 'product', product %}
+                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                
+                {% if product.available %}
+                    <button type="submit" class="w-full bg-black text-white py-5 text-[10px] font-medium tracking-[0.4em] uppercase hover:bg-gold transition-colors">
+                        SCELLER DANS MON COFFRE PRIVÉ
+                    </button>
+                {% else %}
+                    <button type="button" disabled class="w-full bg-gray-400 text-white py-5 text-[10px] font-medium tracking-[0.4em] uppercase cursor-not-allowed">
+                        EN RUPTURE DE STOCK
+                    </button>
+                {% endif %}
+            {% endform %}
+            
+            <div class="pt-6 border-t border-black/5">
+                <h4 class="text-[9px] tracking-widest font-sans uppercase text-black/40 mb-4">CARACTÉRISTIQUES</h4>
+                <ul class="space-y-2 text-xs text-black/60 font-light">
+                    <li>✓ Tissu haut de gamme certifié</li>
+                    <li>✓ Confection artisanale atelier</li>
+                    <li>✓ Expédition sous scellé thermique</li>
+                    <li>✓ Garantie 12 mois</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="{{ include.class }} bg-white border border-black/5 p-4 rounded-sm group relative box-glow">
+    <a href="{{ include.product.url }}" class="block">
+        <div class="reveal-frame {{ include.aspect }} bg-cyberwhite mb-6">
+            <img 
+                src="{{ include.product.featured_image | img_url: '800x1000' }}" 
+                alt="{{ include.product.title }}" 
+                class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+            >
+        </div>
+        <div class="flex justify-between items-start text-xs uppercase tracking-wider">
+            <span class="text-luxeblack font-medium tracking-wide truncate max-w-[75%]">{{ include.product.title }}</span>
+            <span class="text-gold font-light">{{ include.product.price | money }}</span>
+        </div>
+    </a>
+</div>

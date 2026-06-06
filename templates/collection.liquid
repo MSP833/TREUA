@@ -1,0 +1,12 @@
+<div class="py-12 px-6 max-w-[1700px] mx-auto">
+    <div class="border-b border-black/10 pb-6 mb-16">
+        <h2 class="font-serif text-4xl font-light text-black">{{ collection.title }}</h2>
+        <p class="text-xs text-black/60 mt-4">{{ collection.description }}</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
+        {% for product in collection.products %}
+            {% include 'product-card', product: product, class: 'md:col-span-1', aspect: 'aspect-[3/4]' %}
+        {% endfor %}
+    </div>
+</div>

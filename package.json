@@ -1,0 +1,25 @@
+{
+  "name": "treua-shopify-theme",
+  "version": "1.0.0",
+  "description": "Premium Shopify theme with interactive design",
+  "main": "index.js",
+  "scripts": {
+    "dev": "shopify theme dev",
+    "push": "shopify theme push",
+    "validate": "shopify theme validate",
+    "pull": "shopify theme pull"
+  },
+  "keywords": [
+    "shopify",
+    "theme",
+    "luxury",
+    "animation",
+    "gsap"
+  ],
+  "author": "MSP833",
+  "license": "MIT",
+  "devDependencies": {
+    "@shopify/cli": "^3.50.0",
+    "@shopify/theme": "^3.50.0"
+  }
+}
